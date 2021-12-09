@@ -14,7 +14,7 @@ const About = () => {
             </p>
             <br/>
             <p>
-                David Vidals: Full Stack Web Fellow at Pursuit. Born and raised in NYC. I recommend search Bad Bunny using our YouTube page!
+                David Vidals: Full Stack Web Fellow at Pursuit. Born and raised in NYC. I recommend searching Bad Bunny using our YouTube page!
                 <a href="https://github.com/Davidvidals">My Github!</a>
             </p>
             <p>
