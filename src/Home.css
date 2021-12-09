@@ -1,0 +1,33 @@
+
+#nav-bar{
+    background-color: red;
+    overflow: hidden;
+    color: white;
+    font-weight: bold;
+}
+
+#nav-bar a{
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+#nav-bar a:hover {
+    /* background-color: white; */
+    color: black;
+  }
+
+#search-container{
+    margin: 0 auto;
+    text-align: center;
+}
+
+#video-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+}
