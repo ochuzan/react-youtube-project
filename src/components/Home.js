@@ -48,7 +48,7 @@ class Home extends Component {
         <View/>
          videoThumbnails = this.state.search.items.map((video)=>{
         return(
-          <Link to ={`/view/`}> <VideoList video = {video} /> </Link>
+          <Link to ='/view/'> <VideoList video = {video} /> </Link>
         )
       })
       }
