@@ -2,10 +2,11 @@ import './Home.css';
 import {Component} from "react"
 // import YouTube from "react-youtube"
 import React from "react"
-import VideoList from "./components/video-list"
+import VideoList from "./VideoList"
+import Navbar from './Navbar';
 
 
-class App extends Component {
+class Home extends Component {
   constructor(){
     super();
     this.state={
@@ -26,7 +27,6 @@ class App extends Component {
       
     })
     console.log(this.state.search)
-    
   }
 
   handleUserInput=(e)=>{
@@ -54,13 +54,7 @@ class App extends Component {
     return (
     <div className="display">  
 
-      <div id="nav-bar">
-        <a href>Youtube</a>
-        <a href ="">Home</a>
-        <a href ="">About</a>
-      </div>
-
-      <br/>
+      <Navbar />
 
       <div id="search-container">
         <form id='search'onSubmit={this.getVideoResult} >
@@ -80,4 +74,4 @@ class App extends Component {
   
 }
 
-export default App;
+export default Home;

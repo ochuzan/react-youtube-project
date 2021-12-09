@@ -1,13 +1,10 @@
 import './About.css';
+import Navbar from './Navbar';
 
 const About = () => {
     return (
         <header>
-            <ul>
-                <li><a href="default.asp">Home</a></li>
-                <li><a href="about.asp">About</a></li>
-                <li><a href="view.asp">View</a></li>
-            </ul>
+            <Navbar />
             <h1>
             Create a React application that lets you search for YouTube videos using the YouTube API, then choose a video from a list to watch.
             </h1>
