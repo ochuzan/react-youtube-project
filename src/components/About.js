@@ -17,6 +17,10 @@ const About = () => {
                 David Vidals: Full Stack Web Fellow at Pursuit. Born and raised in NYC. I recommend search Bad Bunny using our YouTube page!
                 <a href="https://github.com/Davidvidals">My Github!</a>
             </p>
+            <p>
+                Oliver Chuzan: Full Stack Web Fellow at Pursuit, formerly a Workday Financials Business Systems Associate
+                <a href="https://github.com/ochuzan">Oliver Chuzan's Github</a>
+            </p>
         </header>
     );
 };
