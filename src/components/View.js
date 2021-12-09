@@ -7,28 +7,14 @@ class View extends Component {
     constructor(){
         super()
         this.state = {
-            videoSearchTest: [],
-            // selectedVideo: []
+           
         }
     }
 
-    // componentDidMount(){
-    //     this.getTestVideo()
-    // }
-
-    // getTestVideo = () => {
-    //     fetch(`https:///youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=Linustechtips&type=video&key=${process.env.REACT_APP_API_KEY}`)
-    //         .then((res) => {
-    //             return res.json();
-    //         }).then((data) => {
-    //             this.setState({
-    //                 videoSearchTest: data
-    //             })
-    //         })
-    //         console.log(this.state.videoSearchTest)
-    // }
-
     render(){
+
+
+
         const opts = {
             height: '405',
             width: '720',
@@ -42,7 +28,8 @@ class View extends Component {
             <div>
                 <Navbar />
                 <div id="video-container">
-                    <YouTube videoId="2g811Eo7K8U" opts={opts} />
+                   
+                    <YouTube videoId={"2g811Eo7K8U"} opts={opts} />
                 </div>
             </div>
         )

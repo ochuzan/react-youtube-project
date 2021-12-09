@@ -4,6 +4,8 @@ import {Component} from "react"
 import React from "react"
 import VideoList from "./VideoList"
 import Navbar from './Navbar';
+import {Link} from "react-router-dom";
+import View from './View';
 
 
 class Home extends Component {
@@ -43,10 +45,11 @@ class Home extends Component {
       if(this.state.search.length === 0){
         videoThumbnails= <div class="alert"><p>No search results yet! Please Submit a search above!</p></div>
       } else{
+        <View/>
          videoThumbnails = this.state.search.items.map((video)=>{
-      return(
-          <VideoList video = {video} />
-      )
+        return(
+          <Link to ={`/view/`}> <VideoList video = {video} /> </Link>
+        )
       })
       }
      
@@ -65,7 +68,7 @@ class Home extends Component {
       </div>
       <br/>
       <div id="video-container">  
-      {videoThumbnails}
+       {videoThumbnails}
       </div>
 
     </div>
