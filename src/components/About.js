@@ -12,6 +12,10 @@ const About = () => {
                 Alex Tan: Full Stack Web Fellow at Pursuit, lived in Virginia before moving to New York to learn how to become a better coder.
                 <a href="https://github.com/AlexTan21">My GitHub</a>
             </p>
+            <p>
+                Oliver Chuzan: Full Stack Web Fellow at Pursuit, formerly a Workday Financials Business Systems Associate
+                <a href="https://github.com/ochuzan">Oliver Chuzan's Github</a>
+            </p>
         </header>
     );
 };
