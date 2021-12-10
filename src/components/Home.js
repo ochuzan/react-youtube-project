@@ -4,7 +4,7 @@ import {Component} from "react"
 import React from "react"
 import VideoList from "./VideoList"
 import Navbar from './Navbar';
-import {Link} from "react-router-dom";
+import {Link, Route, Switch} from "react-router-dom";
 import View from './View';
 
 
@@ -26,7 +26,6 @@ class Home extends Component {
       this.setState({
         search: data
       })
-      
     })
     console.log(this.state.search)
   }
@@ -35,9 +34,20 @@ class Home extends Component {
     this.setState({
       userInput:e.target.value,
     })
-   
   }
-  
+
+  // renderVideoThumbnails = () => {
+  //   let videoThumbnails 
+  //     if(this.state.search.length === 0){
+  //       videoThumbnails= <div class="alert"><p>No search results yet! Please Submit a search above!</p></div>
+  //     } else{
+  //       videoThumbnails = this.state.search.items.map((video)=>{
+  //       return(
+  //         <Link to ='/view/'> <VideoList video = {video} /> </Link>
+  //         )
+  //       })
+  //     }
+  // }
 
   render(){
      console.log(this.state.userInput)
@@ -45,12 +55,11 @@ class Home extends Component {
       if(this.state.search.length === 0){
         videoThumbnails= <div class="alert"><p>No search results yet! Please Submit a search above!</p></div>
       } else{
-        <View/>
-         videoThumbnails = this.state.search.items.map((video)=>{
+        videoThumbnails = this.state.search.items.map((video)=>{
         return(
-          <Link to ='/view/'> <VideoList video = {video} /> </Link>
-        )
-      })
+          <Link to = {{pathname:'/view/:id', state: {data: video}}}> <VideoList video = {video} /> </Link>
+          )
+        })
       }
      
 
@@ -67,8 +76,8 @@ class Home extends Component {
       
       </div>
       <br/>
-      <div id="video-container">  
-       {videoThumbnails}
+      <div id="thumbnail-container">  
+          {videoThumbnails}
       </div>
 
     </div>

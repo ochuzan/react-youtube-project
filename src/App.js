@@ -15,7 +15,7 @@ function App() {
           <Route path='/about'>
             <About />
           </Route>
-          <Route path='/view/'>
+          <Route path='/view'>
             <View />
           </Route>
         </Switch>

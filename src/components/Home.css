@@ -23,7 +23,7 @@
     text-align: center;
 }
 
-#video-container{
+#thumbnail-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     text-align: center;
