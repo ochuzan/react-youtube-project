@@ -36,6 +36,10 @@ function View (){
                    
                     <YouTube videoId={props.state.data.id.videoId} opts={opts} />
                 </div>
+
+                <div id='comment-form'>
+                    
+                </div>
             </div>
         )
     // }

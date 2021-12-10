@@ -8,13 +8,13 @@
 #nav-bar a{
     float: left;
     text-align: center;
-    padding: 14px 16px;
+    /* padding: 14px 16px; */
     text-decoration: none;
     font-size: 17px;
 }
 
 #nav-bar a:hover {
-    /* background-color: white; */
+    background-color: white;
     color: black;
   }
 
@@ -29,4 +29,10 @@
     text-align: center;
     padding: 20px;
     margin: 0 auto;
+}
+.alert{
+    text-align: center;
+    border: 1px solid black;
+    margin: 0 auto;
+    background-color: grey;
 }

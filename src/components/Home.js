@@ -53,7 +53,7 @@ class Home extends Component {
      console.log(this.state.userInput)
      let videoThumbnails 
       if(this.state.search.length === 0){
-        videoThumbnails= <div class="alert"><p>No search results yet! Please Submit a search above!</p></div>
+        videoThumbnails= <div ><p class="alert">No search results yet! Please Submit a search above!</p></div>
       } else{
         videoThumbnails = this.state.search.items.map((video)=>{
         return(
@@ -67,7 +67,7 @@ class Home extends Component {
     <div className="display">  
 
       <Navbar />
-
+        <br/>
       <div id="search-container">
         <form id='search'onSubmit={this.getVideoResult} >
           <input type='text' placeholder='Search...' id ='text' value={this.state.userInput} onInput={this.handleUserInput}/> 
