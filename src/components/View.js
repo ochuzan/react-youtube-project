@@ -1,25 +1,14 @@
 import { Component } from "react";
 import Navbar from "./Navbar";
 import YouTube from "react-youtube";
+import { withRouter } from 'react-router-dom'
 import './View.css';
-import { useLocation } from 'react-router-dom'
 
-// class View extends Component {
-function View (){
-    // constructor(){
-    //     super()
-    //     this.state = {
-           
-    //     }
-    // }
 
-    
+class View extends Component {
+    render(){
+        const { id } = this.props.match.params;
 
-    // render(){
-        const props = useLocation()
-        // const video = location.state
-
-        console.log(props)
         const opts = {
             height: '405',
             width: '720',
@@ -28,13 +17,13 @@ function View (){
               autoplay: 0,
             },
           };
-        //   2g811Eo7K8U
+
         return (
             <div>
                 <Navbar />
+
                 <div id="video-container">
-                   
-                    <YouTube videoId={props.state.data.id.videoId} opts={opts} />
+                    <YouTube videoId={id} opts={opts} />
                 </div>
 
                 <div id='comment-form'>
@@ -42,7 +31,7 @@ function View (){
                 </div>
             </div>
         )
-    // }
+    }
 }
 
-export default View;
+export default withRouter(View);
