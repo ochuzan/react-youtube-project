@@ -53,7 +53,7 @@ class Home extends Component {
      console.log(this.state.userInput)
      let videoThumbnails 
       if(this.state.search.length === 0){
-        videoThumbnails= <div ><p class="alert">No search results yet! Please Submit a search above!</p></div>
+        videoThumbnails= <div id="alert"><p>No search results yet! Please Submit a search above!</p></div>
       } else{
         videoThumbnails = this.state.search.items.map((video)=>{
         return(
@@ -64,6 +64,7 @@ class Home extends Component {
      
 
     return (
+      
     <div className="display">  
 
       <Navbar />
@@ -76,8 +77,10 @@ class Home extends Component {
       
       </div>
       <br/>
-      <div id="thumbnail-container">  
+      <div class='thumbnail-container'>  
+
           {videoThumbnails}
+
       </div>
 
     </div>
