@@ -1,11 +1,9 @@
-import { render } from "@testing-library/react";
 import { Component } from "react";
 import './VideoList.css'
 
 class VideoList extends Component{
-    constructor(){
-        super();
-    }
+    render(){
+        let {thumbnails, title} = this.props.video.snippet;
 
 
 render(){

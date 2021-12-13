@@ -15,13 +15,12 @@ function App() {
           <Route path='/about'>
             <About />
           </Route>
-          <Route path='/view'>
+          <Route path='/view/:id'>
             <View />
           </Route>
         </Switch>
       </div>
     </Router>
-    
   );
 }
 
