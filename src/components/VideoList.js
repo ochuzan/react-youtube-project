@@ -2,10 +2,7 @@ import { Component } from "react";
 import './VideoList.css'
 
 class VideoList extends Component{
-    render(){
-        let {thumbnails, title} = this.props.video.snippet;
-
-
+  
 render(){
     let {thumbnails, title}= this.props.video.snippet
     return(
@@ -26,6 +23,6 @@ render(){
             
         
     )}
-}
+    }
 
 export default VideoList
