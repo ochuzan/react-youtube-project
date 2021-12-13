@@ -33,10 +33,10 @@ class Home extends Component {
   }
 
   render(){
-    let videoThumbnails;
-      if (this.state.search.length === 0){
-        videoThumbnails= <div ><p class="alert">No search results yet! Please Submit a search above!</p></div>
-      } else {
+     let videoThumbnails 
+      if(this.state.search.length === 0){
+        videoThumbnails= <div id="alert"><p>No search results yet! Please Submit a search above!</p></div>
+      } else{
         videoThumbnails = this.state.search.items.map((video)=>{
         return(
           <Link to = {`/view/${video.id.videoId}`}> <VideoList video = {video} /> </Link>
@@ -44,20 +44,23 @@ class Home extends Component {
         })
       }
 
-    return (
-      <div className="display">  
-        <Navbar />
+    return ( 
+    <div className="display">  
+
+      <Navbar />
         <br/>
-        <div id="search-container">
-          <form id='search'onSubmit={this.getVideoResult} >
-            <input type='text' placeholder='Search...' id ='text' value={this.state.userInput} onInput={this.handleUserInput}/> 
-            <button  type='submit'>Search</button>
-          </form>
-        </div>
-        <br/>
-        <div id="thumbnail-container">  
+      <div id="search-container">
+        <form id='search'onSubmit={this.getVideoResult} >
+          <input type='text' placeholder='Search...' id ='text' value={this.state.userInput} onInput={this.handleUserInput}/> 
+          <button  type='submit'>Search</button>
+        </form>
+      
+      </div>
+      <br/>
+      <div class='thumbnail-container'>  
+
           {videoThumbnails}
-        </div>
+
       </div>
     );
   }
