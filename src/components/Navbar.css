@@ -6,7 +6,6 @@ header {
 }
 
 header > * {
-    /* margin: 10px; */
     height: auto;
 }
 

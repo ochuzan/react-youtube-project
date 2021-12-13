@@ -1,7 +1,7 @@
 import { Component } from "react";
 import Navbar from "./Navbar";
 import YouTube from "react-youtube";
-import { withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom';
 import './View.css';
 
 
@@ -13,7 +13,6 @@ class View extends Component {
             height: '405',
             width: '720',
             playerVars: {
-              // https://developers.google.com/youtube/player_parameters
               autoplay: 0,
             },
           };
@@ -21,14 +20,9 @@ class View extends Component {
         return (
             <div id="video-page">
                 <Navbar />
-
                 <div id="video-container">
                     <YouTube videoId={id} opts={opts} />
                 </div>
-
-                {/* <div id='comment-form'>
-                    
-                </div> */}
             </div>
         )
     }

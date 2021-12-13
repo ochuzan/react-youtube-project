@@ -1,30 +1,24 @@
 import { Component } from "react";
-import './VideoList.css'
+import './VideoList.css';
 
 
 class VideoList extends Component{
-  
-render(){
-    let {thumbnails, title}= this.props.video.snippet
-    return(
-         <div id='thumbnail-container'>
-            <div class ='video-container'>
-                <div class='media'>
-                    <img src={thumbnails.default.url} alt='youtube thumbnail'/>
-                </div>     
+    render(){
+        let {thumbnails, title}= this.props.video.snippet;
+        
+        return(
+            <div id='thumbnail-container'>
+                <div class ='video-container'>
+                    <div class='media'>
+                        <img src={thumbnails.default.url} alt='youtube thumbnail'/>
+                    </div>
                     <div class ='content'>
-                       <span> {title} </span> 
+                        <span> {title} </span> 
                         <br/>
                     </div>
-             </div>
-             
-
-
-       </div> 
-            
-        
+                </div>
+            </div> 
     )}
-
-    }
+}
 
 export default VideoList
