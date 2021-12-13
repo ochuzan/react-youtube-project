@@ -13,7 +13,8 @@ class Home extends Component {
     super();
     this.state={
       search: [],
-      userInput: ''
+      userInput: '',
+      noResults: true
     }
   }
 
@@ -63,8 +64,7 @@ class Home extends Component {
       }
      
 
-    return (
-      
+    return (      
     <div className="display">  
 
       <Navbar />

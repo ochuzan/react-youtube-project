@@ -6,14 +6,14 @@ class Navbar extends Component {
     render(){
         return(
             <header>
-                <h1>YouTube</h1>
+                <img id="logo" src="https://download.logo.wine/logo/YouTube/YouTube-Logo.wine.png" alt= "YouTube Logo"/>
                 <nav>
                     <ul>
                         <li>
-                           <Link to = "/"> Home </Link>
+                           <Link to = "/" > Home </Link>
                         </li>
                         <li>
-                           <Link to = "/about"> About </Link>
+                           <Link to = "/about" > About </Link>
                         </li>
                     </ul>
                 </nav>
