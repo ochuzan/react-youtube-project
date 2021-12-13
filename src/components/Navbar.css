@@ -10,6 +10,11 @@ header > * {
     height: auto;
 }
 
+#logo {
+    width: 130px;
+    background-color: white;
+}
+
 nav ul {
     list-style: none;
     display: inline-block;
@@ -19,11 +24,18 @@ nav ul {
 
 nav ul li {
     display: inline-block;
-    font-size: 18px;
+    font-size: 20px;
     padding-right: 25px;
     padding-left: 25px;
+    margin-top: 20px;
 }
 
-nav ul li:hover {
+nav ul li a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
     color: black;
+    font-weight: bold;
 }

@@ -10,7 +10,8 @@ class Home extends Component {
     super();
     this.state={
       search: [],
-      userInput: ''
+      userInput: '',
+      noResults: true
     }
   }
 
@@ -21,7 +22,8 @@ class Home extends Component {
         return res.json()
       }).then((data)=>{
         this.setState({
-          search: data
+          search: data,
+          noResults: false
         })
       })
   }
@@ -35,11 +37,14 @@ class Home extends Component {
   render(){
     let videoThumbnails;
       if (this.state.search.length === 0){
-        videoThumbnails= <div ><p class="alert">No search results yet! Please Submit a search above!</p></div>
       } else {
         videoThumbnails = this.state.search.items.map((video)=>{
         return(
-          <Link to = {`/view/${video.id.videoId}`}> <VideoList video = {video} /> </Link>
+          <Link to={`/view/${video.id.videoId}`}>
+            <div >
+              <VideoList video={video} />
+            </div>
+          </Link>
           )
         })
       }
@@ -51,11 +56,12 @@ class Home extends Component {
         <div id="search-container">
           <form id='search'onSubmit={this.getVideoResult} >
             <input type='text' placeholder='Search...' id ='text' value={this.state.userInput} onInput={this.handleUserInput}/> 
-            <button  type='submit'>Search</button>
+            <button type='submit'>Search</button>
           </form>
         </div>
+        {this.state.noResults?<div id="no-results">No search results yet! Please submit a search above!</div>:null}
         <br/>
-        <div id="thumbnail-container">  
+        <div id="thumbnail-container">
           {videoThumbnails}
         </div>
       </div>

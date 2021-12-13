@@ -1,4 +1,9 @@
+#video-page {
+    background-color: black;
+}
+
 #video-container {
     text-align: center;
     margin: 45px;
+    /* background-color: black; */
 }

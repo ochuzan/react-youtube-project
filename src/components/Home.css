@@ -29,8 +29,12 @@
     text-align: center;
     padding: 20px;
     margin: 0 auto;
+    text-align: center;
 }
-.alert{
+
+#no-results {
+    display: block;
+    justify-content: center;
     text-align: center;
     border: 1px solid black;
     margin: 0 auto;

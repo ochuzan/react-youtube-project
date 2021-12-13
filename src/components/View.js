@@ -19,16 +19,16 @@ class View extends Component {
           };
 
         return (
-            <div>
+            <div id="video-page">
                 <Navbar />
 
                 <div id="video-container">
                     <YouTube videoId={id} opts={opts} />
                 </div>
 
-                <div id='comment-form'>
+                {/* <div id='comment-form'>
                     
-                </div>
+                </div> */}
             </div>
         )
     }
